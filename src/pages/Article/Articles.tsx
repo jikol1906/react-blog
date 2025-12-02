@@ -1,5 +1,5 @@
 import type { Article } from '@/types';
-import { useFetch } from '../hooks/useFetch';
+import { useFetch } from '@/hooks/useFetch';
 import ArticleCard from '@/components/ArticleCard';
 
 export default function Articles() {
