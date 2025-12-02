@@ -9,3 +9,18 @@ export interface Article {
     image: string;
     views: number;
   }
+
+  // Neu hinzufügen:
+export interface Comment {
+  id: number;
+  articleId: number;
+  userId: number;
+  text: string;
+  date: string;
+}
+
+export interface User {
+    id: number;
+    username: string;
+    email: string;
+}
