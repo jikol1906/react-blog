@@ -1,13 +1,18 @@
-import './App.css'
-import Articles from './pages/Articles'
+import { BrowserRouter, Routes, Route } from "react-router";
+import "./App.css";
+import Articles from "./pages/Articles";
+import Layout from "./pages/Layout";
 
 function App() {
-
   return (
-    <>
-      <Articles />
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout/>}>
+          <Route path="/" element={<Articles />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
