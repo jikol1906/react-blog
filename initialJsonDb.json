@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "React Hooks im Jahr 2025: State-Management neu gedacht",
-      "authorId": 101,
+      "userId": 101,
       "date": "2025-11-28",
       "category": "Frontend",
       "summary": "Ein Blick auf die neuesten Entwicklungen und Best Practices für Hooks, inklusive der Nutzung von useReducer für komplexe Zustände.",
@@ -14,7 +14,7 @@
     {
       "id": 2,
       "title": "Next.js vs Remix: Welches Framework gewinnt 2026?",
-      "authorId": 102,
+      "userId": 102,
       "date": "2025-11-24",
       "category": "Frontend",
       "summary": "Ein detaillierter Vergleich der beliebtesten React-Frameworks.",
@@ -25,7 +25,7 @@
     {
       "id": 3,
       "title": "Einführung in GoLang für JavaScript-Entwickler",
-      "authorId": 102,
+      "userId": 102,
       "date": "2025-11-22",
       "category": "Backend",
       "summary": "Lernen Sie die Grundlagen der statischen Typisierung.",
@@ -36,7 +36,7 @@
     {
       "id": 4,
       "title": "Die Macht von Tailwind und shadcn/ui",
-      "authorId": 102,
+      "userId": 102,
       "date": "2025-11-01",
       "category": "Design",
       "summary": "Warum Utility-First-CSS und Component Libraries die Entwicklung beschleunigen.",
@@ -47,7 +47,7 @@
     {
       "id": 5,
       "title": "Performance-Optimierung mit React.memo und useMemo",
-      "authorId": 101,
+      "userId": 101,
       "date": "2025-10-15",
       "category": "Frontend",
       "summary": "Tipps und Tricks zur Vermeidung unnötiger Re-Renders in React-Anwendungen.",
@@ -58,7 +58,7 @@
     {
       "id": 6,
       "title": "Sicherheit in REST APIs mit JWT implementieren",
-      "authorId": 103,
+      "userId": 103,
       "date": "2025-11-13",
       "category": "Backend",
       "summary": "Schritt-für-Schritt-Anleitung zur Token-basierten Authentifizierung.",
@@ -69,7 +69,7 @@
     {
       "id": 7,
       "title": "Zustandsverwaltung im Zeitalter von Zustandshaken (useReducer)",
-      "authorId": 101,
+      "userId": 101,
       "date": "2025-10-01",
       "category": "Frontend",
       "summary": "Ein tiefer Einblick in komplexe Zustandslogik mit useReducer.",
@@ -80,7 +80,7 @@
     {
       "id": 8,
       "title": "Accessibility (A11Y) in React Komponenten",
-      "authorId": 104,
+      "userId": 104,
       "date": "2025-11-06",
       "category": "Frontend",
       "summary": "Stellen Sie sicher, dass Ihre App für alle Nutzer zugänglich ist.",
@@ -91,7 +91,7 @@
     {
       "id": 9,
       "title": "PostgreSQL vs MongoDB: Wann welche Datenbank?",
-      "authorId": 103,
+      "userId": 103,
       "date": "2025-11-04",
       "category": "Backend",
       "summary": "Vor- und Nachteile von relationalen vs. NoSQL-Datenbanken.",
@@ -102,7 +102,7 @@
     {
       "id": 10,
       "title": "Modernes CSS: Container Queries verstehen",
-      "authorId": 102,
+      "userId": 102,
       "date": "2025-10-28",
       "category": "Design",
       "summary": "Ein Game-Changer für Responsive Design.",
@@ -113,7 +113,7 @@
     {
       "id": 11,
       "title": "WebSockets in einer React-App mit Express.js",
-      "authorId": 104,
+      "userId": 104,
       "date": "2025-10-20",
       "category": "Backend",
       "summary": "Echtzeitkommunikation einfach gemacht.",
@@ -124,7 +124,7 @@
     {
       "id": 12,
       "title": "Unit-Testing von Custom Hooks mit der React Testing Library",
-      "authorId": 101,
+      "userId": 101,
       "date": "2025-09-05",
       "category": "Frontend",
       "summary": "Wie man benutzerdefinierte Logikkomponenten robust testet.",
@@ -135,7 +135,7 @@
     {
       "id": 13,
       "title": "Der Aufstieg von Bun: JavaScript Runtime neu erfunden?",
-      "authorId": 102,
+      "userId": 102,
       "date": "2025-08-15",
       "category": "Frontend",
       "summary": "Geschwindigkeitsvergleich und Features des neuen Players.",
@@ -146,7 +146,7 @@
     {
       "id": 14,
       "title": "Datenbank-Migrationen mit Knex.js verwalten",
-      "authorId": 103,
+      "userId": 103,
       "date": "2025-07-29",
       "category": "Backend",
       "summary": "Versionskontrolle für Ihre Datenbankstruktur.",
@@ -157,7 +157,7 @@
     {
       "id": 15,
       "title": "Die evolution des CSS-in-JS: Von Styled-Components zu Vanilla-Extract",
-      "authorId": 101,
+      "userId": 101,
       "date": "2025-07-01",
       "category": "Design",
       "summary": "Ein Überblick über moderne Styling-Ansätze in React.",
