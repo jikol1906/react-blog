@@ -1,12 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, type ReactNode } from "react";
-
-// 1. Define the User interface based on your db.json structure
-export interface User {
-  id: number;
-  username: string;
-  email: string;
-  // We exclude 'password' from the state for security best practices
-}
+import type { User } from "@/types";
+import { createContext, useContext, useState, useEffect, type ReactNode } from "react";
 
 // 2. Define the shape of our Context
 interface AuthContextType {
@@ -44,8 +37,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setError(null);
 
     try {
-      // Fetch user from json-server filtering by email
-      // See Chapter 8.1 regarding fetch API [cite: 2655]
       const response = await fetch(`http://localhost:3000/users?email=${email}`);
       
       if (!response.ok) {
@@ -54,9 +45,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
       const users = await response.json();
 
-      // Check password match
       if (users.length > 0 && users[0].password === password) {
-        // Create a safe user object without the password
         const userData: User = {
           id: users[0].id,
           username: users[0].username,
