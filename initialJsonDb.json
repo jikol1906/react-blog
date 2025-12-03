@@ -3,62 +3,167 @@
     {
       "id": 1,
       "title": "React Hooks im Jahr 2025: State-Management neu gedacht",
-      "userId": 101,
+      "authorId": 101,
       "date": "2025-11-28",
       "category": "Frontend",
       "summary": "Ein Blick auf die neuesten Entwicklungen und Best Practices für Hooks, inklusive der Nutzung von useReducer für komplexe Zustände.",
       "content": "Der Artikeltext hier...",
+      "image": "react_hooks.jpg",
       "views": 450
     },
     {
       "id": 2,
       "title": "Next.js vs Remix: Welches Framework gewinnt 2026?",
-      "userId": 102,
+      "authorId": 102,
       "date": "2025-11-24",
       "category": "Frontend",
       "summary": "Ein detaillierter Vergleich der beliebtesten React-Frameworks.",
       "content": "Dies ist der detaillierte Inhalt für den Artikel 2 mit dem Titel 'Next.js vs Remix: Welches Framework gewinnt 2026?'.",
+      "image": "nextjs_remix.jpg",
       "views": 339
     },
     {
       "id": 3,
       "title": "Einführung in GoLang für JavaScript-Entwickler",
-      "userId": 102,
+      "authorId": 102,
       "date": "2025-11-22",
       "category": "Backend",
       "summary": "Lernen Sie die Grundlagen der statischen Typisierung.",
       "content": "Dies ist der detaillierte Inhalt für den Artikel 3 mit dem Titel 'Einführung in GoLang für JavaScript-Entwickler'.",
+      "image": "golang_js.jpg",
       "views": 103
+    },
+    {
+      "id": 4,
+      "title": "Die Macht von Tailwind und shadcn/ui",
+      "authorId": 102,
+      "date": "2025-11-01",
+      "category": "Design",
+      "summary": "Warum Utility-First-CSS und Component Libraries die Entwicklung beschleunigen.",
+      "content": "Der Artikeltext hier...",
+      "image": "tailwind_shadcn.jpg",
+      "views": 200
+    },
+    {
+      "id": 5,
+      "title": "Performance-Optimierung mit React.memo und useMemo",
+      "authorId": 101,
+      "date": "2025-10-15",
+      "category": "Frontend",
+      "summary": "Tipps und Tricks zur Vermeidung unnötiger Re-Renders in React-Anwendungen.",
+      "content": "Der Artikeltext hier...",
+      "image": "react_perf.jpg",
+      "views": 550
     },
     {
       "id": 6,
       "title": "Sicherheit in REST APIs mit JWT implementieren",
-      "userId": 103,
+      "authorId": 103,
       "date": "2025-11-13",
       "category": "Backend",
       "summary": "Schritt-für-Schritt-Anleitung zur Token-basierten Authentifizierung.",
       "content": "Dies ist der detaillierte Inhalt für den Artikel 6 mit dem Titel 'Sicherheit in REST APIs mit JWT implementieren'.",
+      "image": "jwt_security.jpg",
       "views": 184
+    },
+    {
+      "id": 7,
+      "title": "Zustandsverwaltung im Zeitalter von Zustandshaken (useReducer)",
+      "authorId": 101,
+      "date": "2025-10-01",
+      "category": "Frontend",
+      "summary": "Ein tiefer Einblick in komplexe Zustandslogik mit useReducer.",
+      "content": "Der Artikeltext hier...",
+      "image": "usereducer_deep.jpg",
+      "views": 410
     },
     {
       "id": 8,
       "title": "Accessibility (A11Y) in React Komponenten",
-      "userId": 104,
+      "authorId": 104,
       "date": "2025-11-06",
       "category": "Frontend",
       "summary": "Stellen Sie sicher, dass Ihre App für alle Nutzer zugänglich ist.",
       "content": "Dies ist der detaillierte Inhalt für den Artikel 8 mit dem Titel 'Accessibility (A11Y) in React Komponenten'.",
+      "image": "a11y_react.jpg",
       "views": 384
     },
     {
       "id": 9,
       "title": "PostgreSQL vs MongoDB: Wann welche Datenbank?",
-      "userId": 103,
+      "authorId": 103,
       "date": "2025-11-04",
       "category": "Backend",
       "summary": "Vor- und Nachteile von relationalen vs. NoSQL-Datenbanken.",
       "content": "Dies ist der detaillierte Inhalt für den Artikel 9 mit dem Titel 'PostgreSQL vs MongoDB: Wann welche Datenbank?'.",
+      "image": "db_compare.jpg",
       "views": 515
+    },
+    {
+      "id": 10,
+      "title": "Modernes CSS: Container Queries verstehen",
+      "authorId": 102,
+      "date": "2025-10-28",
+      "category": "Design",
+      "summary": "Ein Game-Changer für Responsive Design.",
+      "content": "Der Artikeltext hier...",
+      "image": "container_queries.jpg",
+      "views": 150
+    },
+    {
+      "id": 11,
+      "title": "WebSockets in einer React-App mit Express.js",
+      "authorId": 104,
+      "date": "2025-10-20",
+      "category": "Backend",
+      "summary": "Echtzeitkommunikation einfach gemacht.",
+      "content": "Der Artikeltext hier...",
+      "image": "websockets.jpg",
+      "views": 290
+    },
+    {
+      "id": 12,
+      "title": "Unit-Testing von Custom Hooks mit der React Testing Library",
+      "authorId": 101,
+      "date": "2025-09-05",
+      "category": "Frontend",
+      "summary": "Wie man benutzerdefinierte Logikkomponenten robust testet.",
+      "content": "Der Artikeltext hier...",
+      "image": "testing_hooks.jpg",
+      "views": 300
+    },
+    {
+      "id": 13,
+      "title": "Der Aufstieg von Bun: JavaScript Runtime neu erfunden?",
+      "authorId": 102,
+      "date": "2025-08-15",
+      "category": "Frontend",
+      "summary": "Geschwindigkeitsvergleich und Features des neuen Players.",
+      "content": "Der Artikeltext hier...",
+      "image": "bun_runtime.jpg",
+      "views": 620
+    },
+    {
+      "id": 14,
+      "title": "Datenbank-Migrationen mit Knex.js verwalten",
+      "authorId": 103,
+      "date": "2025-07-29",
+      "category": "Backend",
+      "summary": "Versionskontrolle für Ihre Datenbankstruktur.",
+      "content": "Der Artikeltext hier...",
+      "image": "knex_migrations.jpg",
+      "views": 195
+    },
+    {
+      "id": 15,
+      "title": "Die evolution des CSS-in-JS: Von Styled-Components zu Vanilla-Extract",
+      "authorId": 101,
+      "date": "2025-07-01",
+      "category": "Design",
+      "summary": "Ein Überblick über moderne Styling-Ansätze in React.",
+      "content": "Der Artikeltext hier...",
+      "image": "css_in_js_evolution.jpg",
+      "views": 250
     }
   ],
   
@@ -97,6 +202,34 @@
       "userId": 104,
       "text": "Guter Einblick in das Thema 'Einführung in GoLang für JavaScript-Entwickler'. Sehr hilfreich!",
       "date": "2025-12-01"
+    },
+    {
+      "id": 206,
+      "articleId": 5,
+      "userId": 201,
+      "text": "Memoization ist so wichtig für große Listen!",
+      "date": "2025-10-16"
+    },
+    {
+      "id": 207,
+      "articleId": 12,
+      "userId": 101,
+      "text": "Die Testing Library ist wirklich die beste Wahl, um benutzerzentriert zu testen.",
+      "date": "2025-09-06"
+    },
+    {
+      "id": 208,
+      "articleId": 13,
+      "userId": 103,
+      "text": "Bun ist irre schnell, aber noch nicht ganz stabil genug für unsere Produktivumgebung.",
+      "date": "2025-08-16"
+    },
+    {
+      "id": 209,
+      "articleId": 11,
+      "userId": 104,
+      "text": "Super erklärt, wie man WebSockets in einer modernen App einbindet!",
+      "date": "2025-10-21"
     },
     {
       "id": 210,
