@@ -1,19 +1,23 @@
+import { AuthProvider } from "./context/AuthContext"; // Import the provider
 import { BrowserRouter, Routes, Route } from "react-router";
-import "./App.css";
+import Login from "./pages/Login/Login";
+import ArticleDetails from "./pages/Article/ArticleDetails";
 import Articles from "./pages/Article/Articles";
 import Layout from "./pages/Layout";
-import ArticleDetails from "./pages/Article/ArticleDetails";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Layout/>}>
-          <Route path="/" element={<Articles />} />
-          <Route path="/article/:id" element={<ArticleDetails />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Articles />} />
+            <Route path="/article/:id" element={<ArticleDetails />} />
+          </Route>
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
