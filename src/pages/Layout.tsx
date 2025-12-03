@@ -3,34 +3,27 @@ import { Button } from "../components/ui/button";
 import { useAuth } from "@/context/AuthContext";
 
 const Layout = () => {
-
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
       <header className="flex justify-between items-center py-6 px-8 max-w-7xl mx-auto w-full">
-        <Link to="/" className="text-xl font-medium tracking-tight hover:opacity-80 transition-opacity">
+        <Link
+          to="/"
+          className="text-xl font-medium tracking-tight hover:opacity-80 transition-opacity"
+        >
           {user ? `Willkommen, ${user.username}` : "CodeBlog"}
         </Link>
 
         <nav className="flex gap-4">
-          <Link to="/">
-            <Button 
-              variant="secondary" 
-              className="bg-white text-black hover:bg-gray-200 font-medium"
-            >
-              Artikeln
-            </Button>
-          </Link>
-          
-          <Link to="/login">
-            <Button 
-              variant="secondary" 
-              className="bg-white text-black hover:bg-gray-200 font-medium"
-            >
-              Log out
-            </Button>
-          </Link>
+          <Button asChild>
+            <Link to="/">Artikeln</Link>
+          </Button>
+
+          <Button onClick={logout}>
+            Logout
+          </Button>
+
         </nav>
       </header>
 
