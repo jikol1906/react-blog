@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "React Hooks im Jahr 2025: State-Management neu gedacht",
-      "authorId": 101,
+      "userId": 101,
       "date": "2025-11-28",
       "category": "Frontend",
       "summary": "Ein Blick auf die neuesten Entwicklungen und Best Practices für Hooks, inklusive der Nutzung von useReducer für komplexe Zustände.",
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "title": "Next.js vs Remix: Welches Framework gewinnt 2026?",
-      "authorId": 102,
+      "userId": 102,
       "date": "2025-11-24",
       "category": "Frontend",
       "summary": "Ein detaillierter Vergleich der beliebtesten React-Frameworks.",
@@ -23,7 +23,7 @@
     {
       "id": 3,
       "title": "Einführung in GoLang für JavaScript-Entwickler",
-      "authorId": 102,
+      "userId": 102,
       "date": "2025-11-22",
       "category": "Backend",
       "summary": "Lernen Sie die Grundlagen der statischen Typisierung.",
@@ -33,7 +33,7 @@
     {
       "id": 6,
       "title": "Sicherheit in REST APIs mit JWT implementieren",
-      "authorId": 103,
+      "userId": 103,
       "date": "2025-11-13",
       "category": "Backend",
       "summary": "Schritt-für-Schritt-Anleitung zur Token-basierten Authentifizierung.",
@@ -43,7 +43,7 @@
     {
       "id": 8,
       "title": "Accessibility (A11Y) in React Komponenten",
-      "authorId": 104,
+      "userId": 104,
       "date": "2025-11-06",
       "category": "Frontend",
       "summary": "Stellen Sie sicher, dass Ihre App für alle Nutzer zugänglich ist.",
@@ -53,7 +53,7 @@
     {
       "id": 9,
       "title": "PostgreSQL vs MongoDB: Wann welche Datenbank?",
-      "authorId": 103,
+      "userId": 103,
       "date": "2025-11-04",
       "category": "Backend",
       "summary": "Vor- und Nachteile von relationalen vs. NoSQL-Datenbanken.",
