@@ -66,7 +66,7 @@ export default function ArticleDetails() {
           <span>at {article.date}</span>
         </div>
 
-        <div className="prose prose-invert max-w-none text-lg text-gray-300 leading-relaxed space-y-6">
+        <div className="max-w-none text-lg text-gray-300 leading-relaxed space-y-6">
           <p>{article.content}</p>
           <p>{article.summary}</p>
         </div>
