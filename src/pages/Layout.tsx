@@ -1,12 +1,16 @@
 import { Outlet, Link } from "react-router";
 import { Button } from "../components/ui/button";
+import { useAuth } from "@/context/AuthContext";
 
 const Layout = () => {
+
+  const { user } = useAuth();
+
   return (
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
       <header className="flex justify-between items-center py-6 px-8 max-w-7xl mx-auto w-full">
         <Link to="/" className="text-xl font-medium tracking-tight hover:opacity-80 transition-opacity">
-          CodeBlog
+          {user ? `Willkommen, ${user.username}` : "CodeBlog"}
         </Link>
 
         <nav className="flex gap-4">
