@@ -121,7 +121,6 @@ export default function Articles() {
           ))}
         </div>
 
-        {/* Die neue Pagination Komponente */}
         {!loading && !error && articles && articles.length > 0 && (
           <PaginationControl
             currentPage={currentPage}
