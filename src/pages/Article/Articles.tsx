@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router";
 import type { Article } from "@/types";
 import { useFetch } from "@/hooks/useFetch";
 import { useDebounce } from "@/hooks/useDebounce";
-import ArticleCard from "@/components/ArticleCard";
+import ArticleCard from "@/components/Article/ArticleCard";
 import PaginationControl from "@/components/PaginationControl"; // Deine neue Komponente
 import {
   InputGroup,

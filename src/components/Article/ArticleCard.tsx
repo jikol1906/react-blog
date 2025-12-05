@@ -13,9 +13,7 @@ const ArticleCard = ({ article, authorName }: ArticleCardProps) => {
     const detailPath = `/article/${article.id}`;
 
     return (
-        // 3. Wrap the Card in the Link
-        // We add 'block' to ensure it takes up space and remove default link styles
-        <Link to={detailPath} className="block w-full transition-opacity hover:opacity-90">
+        <Link to={detailPath} className="w-full transition-opacity hover:opacity-90">
             <Card className="cursor-pointer hover:border-zinc-500 transition-colors">
                 <CardHeader>
                     <CardTitle>
