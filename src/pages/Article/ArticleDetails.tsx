@@ -137,12 +137,7 @@ export default function ArticleDetails() {
         {/* Comment Form */}
         <div className="mt-8 bg-zinc-900 p-6 rounded-lg border border-zinc-800">
           <h4 className="text-lg font-medium mb-4">Schreiben Sie einen Kommentar</h4>
-          
-          {user ? (
-            <>
-              <Textarea
-                placeholder="Geben Sie hier Ihren Kommentar ein..."
-                className="bg-black border-zinc-700 text-white min-h-[100px]"
+          <Textarea
                 value={commentText}
                 onChange={(e) => setCommentText(e.target.value)}
                 disabled={isPosting}
@@ -164,15 +159,6 @@ export default function ArticleDetails() {
                   )}
                 </Button>
               </div>
-            </>
-          ) : (
-            <div className="text-center py-6 bg-black rounded border border-zinc-800 border-dashed">
-              <p className="text-gray-400 mb-2">Bitte melden Sie sich an, um zu kommentieren.</p>
-              <Link to="/login">
-                <Button variant="outline" className="text-black">Zum Login</Button>
-              </Link>
-            </div>
-          )}
         </div>
       </div>
     </div>
