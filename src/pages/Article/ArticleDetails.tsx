@@ -6,12 +6,13 @@ import type { ArticleWithUser, CommentWithUser } from "@/types";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { CommentItem } from "@/components/Article/CommentItem";
+import { useAuth } from "@/context/AuthContext";
 
 export default function ArticleDetails() {
   const { id } = useParams<{ id: string }>();
-  
+
   // Zugriff auf den eingeloggten User
-  const { user } = useAuth(); 
+  const { user } = useAuth();
 
   // State für das Eingabefeld und den Ladezustand beim Senden
   const [commentText, setCommentText] = useState("");
@@ -31,11 +32,17 @@ export default function ArticleDetails() {
   );
 
   // 2. Fetch: Kommentare
-  // Wir hängen '&_t={refreshKey}' an. Das ignoriert json-server, aber React denkt, 
+  // Wir hängen '&_t={refreshKey}' an. Das ignoriert json-server, aber React denkt,
   // die URL ist neu und lädt die Daten nochmal.
-  const { data: comments, loading: commentsLoading } = useFetch<CommentWithUser[]>(
+  const { data: comments, loading: commentsLoading } = useFetch<
+    CommentWithUser[]
+  >(
     `http://localhost:3000/comments?articleId=${id}&_expand=user&_sort=date&_order=desc&_t=${refreshKey}`
   );
+
+  const handleRefreshComments = () => {
+    setRefreshKey((prev) => prev + 1);
+  };
 
   // Funktion zum Senden des Kommentars
   const handlePostComment = async () => {
@@ -121,13 +128,19 @@ export default function ArticleDetails() {
       {/* Comments Section */}
       <div className="mt-20 border-t border-gray-800 pt-10">
         <h3 className="text-2xl font-bold mb-6">Kommentare</h3>
-        
+
         <div className="space-y-4 mb-8">
           {commentsLoading ? (
             <p className="text-gray-500">Lade Kommentare...</p>
           ) : comments && comments.length > 0 ? (
             comments.map((comment) => (
-              <CommentItem key={comment.id} comment={comment} />
+              <CommentItem
+                key={comment.id}
+                comment={comment}
+                // Hier übergeben wir die Refresh-Funktion für beide Events
+                onCommentUpdated={handleRefreshComments}
+                onCommentDeleted={handleRefreshComments}
+              />
             ))
           ) : (
             <p className="text-gray-500 italic">Noch keine Kommentare.</p>
@@ -136,29 +149,31 @@ export default function ArticleDetails() {
 
         {/* Comment Form */}
         <div className="mt-8 bg-zinc-900 p-6 rounded-lg border border-zinc-800">
-          <h4 className="text-lg font-medium mb-4">Schreiben Sie einen Kommentar</h4>
+          <h4 className="text-lg font-medium mb-4">
+            Schreiben Sie einen Kommentar
+          </h4>
           <Textarea
-                value={commentText}
-                onChange={(e) => setCommentText(e.target.value)}
-                disabled={isPosting}
-              />
-              {errorMsg && <p className="text-red-500 text-sm mt-2">{errorMsg}</p>}
-              
-              <div className="flex justify-end mt-4">
-                <Button 
-                  onClick={handlePostComment}
-                  disabled={isPosting || !commentText.trim()}
-                  className="bg-white text-black hover:bg-gray-200 font-medium px-6"
-                >
-                  {isPosting ? (
-                    <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Postet...
-                    </>
-                  ) : (
-                    "Kommentar posten"
-                  )}
-                </Button>
-              </div>
+            value={commentText}
+            onChange={(e) => setCommentText(e.target.value)}
+            disabled={isPosting}
+          />
+          {errorMsg && <p className="text-red-500 text-sm mt-2">{errorMsg}</p>}
+
+          <div className="flex justify-end mt-4">
+            <Button
+              onClick={handlePostComment}
+              disabled={isPosting || !commentText.trim()}
+              className="bg-white text-black hover:bg-gray-200 font-medium px-6"
+            >
+              {isPosting ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Postet...
+                </>
+              ) : (
+                "Kommentar posten"
+              )}
+            </Button>
+          </div>
         </div>
       </div>
     </div>
