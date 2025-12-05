@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // 1. useEffect importieren
 import { useNavigate } from "react-router";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,37 +8,37 @@ import {
   FieldGroup, 
   FieldError 
 } from "@/components/ui/field"; 
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuth } from "@/context/AuthContext";
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
     
-    // Use the values from our new AuthManager
-    const { login, isLoading, error: authError } = useAuth();
+    const { login, isLoading, error: authError, user } = useAuth();
     
     const [formError, setFormError] = useState<string | null>(null);
-    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (user) {
+            navigate("/", { replace: true });
+        }
+    }, [user, navigate]);
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
         setFormError(null);
 
-        // Basic validation
         if (!email || !password) {
             setFormError("Please fill in all fields.");
             return;
         }
 
-        // Call the login function from context
-        const success = await login(email, password);
-
-        if (success) {
-            // Redirect to home upon success
-            navigate("/");
-        }
+        await login(email, password);
     };
+
+    if (user) return null; 
 
     return (
         <div className="flex justify-center items-center h-screen">
@@ -71,7 +71,6 @@ const Login = () => {
                                     onChange={(e) => setPassword(e.target.value)}
                                     disabled={isLoading}
                                 />
-                                {/* Display errors from local validation OR the AuthContext */}
                                 {(formError || authError) && (
                                     <FieldError>{formError || authError}</FieldError>
                                 )}
@@ -83,11 +82,6 @@ const Login = () => {
                         </FieldGroup>
                     </form>
                 </CardContent>
-                <CardFooter>
-                    <p className="text-sm text-gray-500 text-center w-full">
-                        Don't have an account? <a href="/register" className="text-blue-500 hover:underline">Sign up</a>
-                    </p>
-                </CardFooter>
             </Card>
         </div>
     );
