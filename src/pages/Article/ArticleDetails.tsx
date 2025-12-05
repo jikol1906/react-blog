@@ -5,13 +5,7 @@ import { useFetch } from "../../hooks/useFetch";
 import type { ArticleWithUser, CommentWithUser } from "@/types";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from "@/components/ui/card";
-import { useAuth } from "@/context/AuthContext"; // NEU: Auth Context
+import { CommentItem } from "@/components/Article/CommentItem";
 
 export default function ArticleDetails() {
   const { id } = useParams<{ id: string }>();
@@ -133,23 +127,7 @@ export default function ArticleDetails() {
             <p className="text-gray-500">Lade Kommentare...</p>
           ) : comments && comments.length > 0 ? (
             comments.map((comment) => (
-              <Card key={comment.id} className="bg-zinc-900 border-zinc-800 text-white">
-                <CardContent className="grid gap-2 p-4">
-                  <CardTitle className="grid gap-1 text-sm font-semibold">
-                    <div className="flex justify-between">
-                      <span className="text-blue-400">@{comment.user?.username || 'Unbekannt'}</span>
-                      <span className="text-xs text-gray-500 font-normal">
-                        {comment.date}
-                      </span>
-                    </div>
-                  </CardTitle>
-                  <CardDescription className="grid gap-2">
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      {comment.text}
-                    </p>
-                  </CardDescription>
-                </CardContent>
-              </Card>
+              <CommentItem key={comment.id} comment={comment} />
             ))
           ) : (
             <p className="text-gray-500 italic">Noch keine Kommentare.</p>
